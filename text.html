@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta cmanyrset="UTF-8">
+		<link rel="stylesheet" href="text.css">
+		<title>one</title>
+	</head>
+	<body>
+		<div class="head1">
+			<div class="head11">
+				<div class="head11_left">
+					<p class="head11p1">帮5买，享帮帮</p>
+				</div>
+				<div class="head11_right">
+					<a class="head11a1" href="#"></a>
+					<a class="head11a2" href="#"></a>
+					<a class="head11a3" href="#"></a>
+					<p class="head11p2">登录</p>
+					<p class="head11p2">注册</p>
+					<a class="head11a4" href=""></a>
+					<p class="head11p4">消息</p>
+					<a class="head11a5" href=""><img src="img/dingquen.jpg" alt=""></a>
+					<p class="head11p4">我的订单</p>
+					<p class="head11p2">我的收藏</p>
+					<p class="head11p2">帮钻转换</p>
+					<a class="head11a6"href=""></a>
+					<p class="head11p4">手机版</p>
+					<p class="head11p2">帮5淘</p>
+					<p class="head11p2">客户服务</p>
+					<a class="head11a7"href=""></a>
+					<p class="head11p4">购物车</p>
+					<p class="head11p5">0</p>
+				</div>
+			</div>
+			<div class="head12">
+				<div class="head121">
+					<img src="img/logo_03.jpg" alt="">
+				</div>
+				<div class="head122">
+					<div class="head122d1">
+						<input type="text" placeholder="输入商品网址或关键词，直通全网，快速帮5购！">
+						<p>搜全网</p>
+					</div>
+					<div class="head122d2">
+						<p class="head122p1">洗发护发</p>
+						<p class="head122p1">日本纸尿裤</p>
+						<p class="head122p2">身体乳</p>
+						<p class="head122p2">内衣文胸</p>
+						<p class="head122p3">iPhone 6s</p>
+						<p class="head122p3">iPad Air2</p>
+						<p class="head122p4">牛仔裤</p>
+						<p class="head122p4">奶粉</p>
+						<p class="head122p4">防晒霜</p>
+						<p class="head122p4">伞</p>
+					</div>
+				</div>
+				<div id="head131">
+					<div id="head132">
+						<div class="s1">
+							<img src="img/se1.jpg">
+						</div>
+						<div class="s2">400-085-0505</div>
+					</div>
+					<div id="head132">
+						<div class="s1">
+							<img src="img/se2.jpg">
+						</div>
+						<div class="s2">mc@b5m.com</div>
+					</div>
+					<div id="head133">
+						<a href=""><img src="img/se3.jpg"></a>
+						<a href="" class="que">常见问题</a>
+					</div>
+				</div>
+			</div>
+			<div id="body11">
+				<div id="body111">
+					全部商品分类
+				</div>
+				<div id="body112">
+					<a href="" id="na1">帮5赚</a>
+					<a href="" id="na1">帮韩品</a>
+					<a href="" id="na1">超划算</a>
+					<a href="" id="na1">品牌货栈</a>
+					<a href="" id="na1">韩国馆</a>
+					<a href="" id="na1">帮社区</a>
+					<a href="" id="na1">1元兑奖</a>
+					<div class="hot" ">
+						<img src="img/hot.gif">
+					</div>
+				</div>
+			</div>
+
+
+
+    <style type="text/css">
+       
+    </style>
+    <script type="text/javascript">
+        /* 知识点：        */
+        /*       this用法 */
+        /*       DOM事件 */
+        /*       定时器 */
+        window.onload = function () {
+            var container = document.getElementById('container');
+            var list = document.getElementById('list');
+            var buttons = document.getElementById('buttons').getElementsByTagName('span');
+            var prev = document.getElementById('prev');
+            var next = document.getElementById('next');
+            var index = 1;
+            var timer;
+            function animate(offset) {
+                //获取的是style.left，是相对左边获取距离，所以第一张图后style.left都为负值，
+                //且style.left获取的是字符串，需要用parseInt()取整转化为数字。
+                var newLeft = parseInt(list.style.left) + offset;
+                list.style.left = newLeft + 'px';
+                //无限滚动判断
+                if (newLeft > -800) {
+                    list.style.left = -4800 + 'px';
+                }
+                if (newLeft < -4800) {
+                    list.style.left = -800 + 'px';
+                }
+            }
+            function play() {
+                //重复执行的定时器
+                timer = setInterval(function () {
+                    next.onclick();
+                }, 2000)
+            }
+            function stop() {
+                clearInterval(timer);
+            }
+            function buttonsShow() {
+                //将之前的小圆点的样式清除
+                for (var i = 0; i < buttons.length; i++) {
+                    if (buttons[i].className == "on") {
+                        buttons[i].className = "";
+                    }
+                }
+                //数组从0开始，故index需要-1
+                buttons[index - 1].className = "on";
+            }
+            prev.onclick = function () {
+                index -= 1;
+                if (index < 1) {
+                    index = 6
+                }
+                buttonsShow();
+                animate(800);
+            };
+            next.onclick = function () {
+                //由于上边定时器的作用，index会一直递增下去，我们只有5个小圆点，所以需要做出判断
+                index += 1;
+                if (index > 6) {
+                    index = 1
+                }
+                animate(-800);
+                buttonsShow();
+            };
+            for (var i = 0; i < buttons.length; i++) {
+                (function (i) {
+                    buttons[i].onclick = function () {
+                        /*  这里获得鼠标移动到小圆点的位置，用this把index绑定到对象buttons[i]上，去谷歌this的用法  */
+                        /*  由于这里的index是自定义属性，需要用到getAttribute()这个DOM2级方法，去获取自定义index的属性*/
+                        var clickIndex = parseInt(this.getAttribute('index'));
+                        var offset = 800 * (index - clickIndex); //这个index是当前图片停留时的index
+                        animate(offset);
+                        index = clickIndex; //存放鼠标点击后的位置，用于小圆点的正常显示
+                        buttonsShow();
+                    }
+                })(i)
+            }
+            container.onmouseover = stop;
+            container.onmouseout = play;
+            play();
+        }
+    </script>
+
+
+<div id="container">
+    <div id="list" style="left: -800px;">
+        <img src="img/bann1.jpeg" alt="1"/>
+        <img src="img/bann1.jpeg" alt="1"/>
+        <img src="img/bann2.jpeg" alt="2"/>
+        <img src="img/bann3.jpeg" alt="3"/>
+        <img src="img/bann4.jpeg" alt="4"/>
+        <img src="img/bann5.jpeg" alt="5"/>
+        <img src="img/bann6.jpeg" alt="5"/>
+        <img src="img/bann6.jpeg" alt="5"/>
+    </div>
+    <div id="buttons">
+        <span index="1" class="on">1</span>
+        <span index="2">2</span>
+        <span index="3">3</span>
+        <span index="4">4</span>
+        <span index="5">5</span>
+        <span index="6">6</span>
+    </div>
+    <a href="javascript:;" id="prev" class="arrow">&lt;</a>
+    <a href="javascript:;" id="next" class="arrow">&gt;</a>
+</div>
+</div>
+
+
+
+
+	<div id="big2">
+		<div id="small2">
+			<div id="lis1">
+				<div id="list1">
+					<ul class="ul1">
+						<li class="li1">当</li>
+						<li class="li1">前</li>
+						<li class="li1">搜</li>
+						<li class="li1">索</li>
+						<li class="li1">电</li>
+						<li class="li1">商</li>
+					</ul>
+					<ul class="ul1">
+						<li class="li1">全</li>
+						<li class="li1">网</li>
+					</ul>
+				</div>
+				<div id="list2">
+					<div class="list2">
+						<a href="" class="many">手机</a>
+						<a href="" class="many">数码</a>
+						<a href="" class="many">影音</a>
+						<a href="" class="many">配件</a>
+					</div>
+					<div class="list2">
+						<a href="" class="many">电脑</a>
+						<a href="" class="many">网络</a>
+						<a href="" class="many">办公</a>
+						<a href="" class="many">打印</a>
+					</div>
+					<div class="list2">
+						<a href="" class="many">家电</a>
+						<a href="" class="many">厨卫</a>
+						<a href="" class="many">生活</a>
+						<a href="" class="many">个户</a>
+					</div>
+					<div class="list2">
+						<a href="" class="many">园艺</a>
+						<a href="" class="many">家具</a>
+						<a href="" class="many">家纺</a>
+						<a href="" class="many">家饰</a>
+					</div>
+					<div class="list2">
+						<a href="" class="many">彩妆</a>
+						<a href="" class="many">面部</a>
+						<a href="" class="many">身体</a>
+						<a href="" class="many">香水</a>
+					</div>
+					<div class="list2">
+						<a href="" class="many">男装</a>
+						<a href="" class="many">女装</a>
+						<a href="" class="many">内衣</a>
+						<a href="" class="many">其他</a>
+					</div>
+					<div class="list2">
+						<a href="" class="many">女包</a>
+						<a href="" class="many">男包</a>
+						<a href="" class="many">女鞋</a>
+						<a href="" class="many">男鞋</a>
+					</div>
+					<div class="list2">
+						<a href="" class="many">运动</a>
+						<a href="" class="many">户外</a>
+						<a href="" class="many">装备</a>
+						<a href="" class="many">服饰</a>
+					</div>
+					<div class="list2">
+						<a href="" class="many">儿童</a>
+						<a href="" class="many">婴儿</a>
+						<a href="" class="many">食品</a>
+						<a href="" class="many">玩具</a>
+					</div>
+					<div class="list2">
+						<a href="" class="many">乐器</a>
+						<a href="" class="many">家宠</a>
+						<a href="" class="many">收藏</a>
+						<a href="" class="many">鲜花</a>
+					</div>
+					<div class="list2">
+						<a href="" class="many">保健</a>
+						<a href="" class="many">理疗</a>
+						<a href="" class="many">药品</a>
+						<a href="" class="many">眼镜</a>
+					</div>
+					<div class="list2">
+						<a href="" class="many">果蔬</a>
+						<a href="" class="many">礼品</a>
+						<a href="" class="many">粮油</a>
+						<a href="" class="many">特产</a>
+					</div>
+					<div class="list2">
+						<a href="" class="many">文艺</a>
+						<a href="" class="many">生活</a>
+						<a href="" class="many">科技</a>
+						<a href="" class="many">教育</a>
+					</div>
+
+
+
+
+
+
+
+				</div>
+				<div id="list3">
+					<ul class="ul2">
+						<li class="li2">
+							<img src="img/dd_03.jpg">
+							<a href="" class="ques">什么是帮5购</a>
+						</li>
+						<li class="li2">
+							<img src="img/dd_06.jpg">
+							<a href="" class="ques">帮5购提供什么服务</a>
+						</li>
+						<li class="li2">
+							<img src="img/dd_08.jpg">
+							<a href="" class="ques">如何提供帮5购服务</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+				<div id="lis2">
+				<div id="list4"></div>
+				<div id="list5">
+					<a href="" class="list5">
+						<img src="img/1(1).jpg">
+					</a>
+					<a href="" class="list5">
+						<img src="img/2.jpg">
+					</a>
+					<a href="" class="list5">
+						<img src="img/3(1).png">
+					</a>
+					<a href="text2.html" class="list5">
+						<img src="img/qqq.png">
+					</a>
+				</div>
+			</div>
+			<div id="lis3">
+				<div id="list6">
+					<div id="horn">
+						<img src="img/ico-notice.png">
+					</div>
+					<div id="fast">
+						帮帮快讯
+					</div>
+					<div id="arrow">
+						<img src="img/jiantou.jpg">
+					</div>
+				</div><style type="text/css">
+        </style>
+
+    </head>
+ <body>
+        <!--div-->
+    <div id="scrollBox">
+        <ul id="con1">
+            <li id="gonggao1">[公告]帮购及VIP服务调整1</li>
+                        <li id="gonggao1">[公告]帮购及VIP服务调整2</li>
+                        <li id="gonggao1">[公告]帮购及VIP服务调整3</li>
+                        <li id="gonggao1">[公告]帮购及VIP服务调整4</li>
+                        <li id="gonggao1">[公告]帮购及VIP服务调整5</li>
+                        <li id="gonggao1">[公告]帮购及VIP服务调整6</li>
+                        <li id="gonggao1">[公告]帮购及VIP服务调整7</li>
+                        <li id="gonggao1">[公告]帮购及VIP服务调整8</li>
+                        <li id="gonggao1">[公告]帮购及VIP服务调整9</li>
+                        <li id="gonggao1">[公告]帮购及VIP服务调整10</li>
+                        <li id="gonggao1">[公告]帮购及VIP服务调整11</li>
+                        <li id="gonggao1">[公告]帮购及VIP服务调整12</li>
+                        <li id="gonggao1">[公告]帮购及VIP服务调整13</li>
+           </ul>
+        <ul id="con2"></ul>
+    </div>
+    <script type="text/javascript">            
+                var area =document.getElementById('scrollBox');
+                var con1 = document.getElementById('con1');
+                var con2 = document.getElementById('con2');
+                con2.innerHTML=con1.innerHTML;
+                function scrollUp(){
+                if(area.scrollTop>=con1.offsetHeight){
+                    area.scrollTop=0;
+                }else{
+                    area.scrollTop++
+                }
+                }                
+                var time = 50;
+                var mytimer=setInterval(scrollUp,time);
+                area.onmouseover=function(){
+                    clearInterval(mytimer);
+                }
+                area.onmouseout=function(){
+                    mytimer=setInterval(scrollUp,time);
+                }
+        </script>
+				<div id="list8">
+					<div id="phone2">
+						<img src="img/phone.png">
+						&nbsp话费充值&nbsp
+						<span style="color: #ff4d04;">(可使用超级帮钻)</span>
+					</div>
+					<div id="phone1">
+						<input type="" name="" placeholder="请输入手机号" style="width: 125px; height: 25px; border: 1px solid #9a9791; font-size: 14px; ">
+					</div>
+					<div id="phone2">
+						<select style="width: 60px; height: 20px; margin-top: 3px;">
+							<option>10</option>
+							<option>30</option>                                                                                                                                                                                                                                                                                                                                                                                                                                           
+							<option>50</option>
+							<option>100</option>
+						</select>
+						<span style="color: #ff4d04;">¥30</span>
+					</div>
+					<div id="phone1">
+						<input type="submit" name="" value="充值" class="top">
+					</div>
+				</div>
+			</div>
+
+
+
+
+			<div id="last">
+				<div id="last1">
+					<img src="img/loginB.jpg">
+				</div>
+				<div id="last2">
+					<ul id="mlast">
+						<li id="mlast2">购物指南</li>
+						<li id="mlast1">如何下单</li>
+						<li id="mlast1">帮5购流程</li>
+						<li id="mlast1">订单查询</li>
+						<li id="mlast1">物流配送</li>
+					</ul>
+					<ul id="mlast">
+						<li id="mlast2">支付相关</li>
+						<li id="mlast1">支付方式</li>
+						<li id="mlast1">安全设置</li>
+						<li id="mlast1">账户信息</li>
+					</ul>
+					<ul id="mlast">
+						<li id="mlast2">售后服务</li>
+						<li id="mlast1">取消订单</li>
+						<li id="mlast1">申请售后</li>
+						<li id="mlast1">退货流程</li>
+						<li id="mlast1">退货相关</li>
+					</ul>
+					<ul id="mlast">
+						<li id="mlast2">VIP服务</li>
+						<li id="mlast1">vip优惠</li>
+						<li id="mlast1">如何成为VIP</li>
+						<li id="mlast1">超级帮钻</li>
+					</ul>
+					<ul id="mlast">
+						<li id="mlast2">帮韩品</li>
+						<li id="mlast1">韩国正品</li>
+						<li id="mlast1">闪电发货</li>
+						<li id="mlast1">帮韩品售后</li>
+					</ul>
+					<ul id="mlast">
+						<li id="mlast2">更多</li>
+						<li id="mlast1">手机APP</li>
+						<li id="mlast1">帮5采APP</li>
+						<li id="mlast1">帮5淘插件</li>
+						<li id="mlast1">其他</li>
+					</ul>
+				</div>
+				<div id="last3">
+					<img src="img/erweima.jpg">
+				</div>
+			</div>
+
+			<div id="dier">
+				<div id="dier1">
+					<a href="" class="dier1">关于帮5买</a>
+					<a href="" class="dier1">|</a>
+					<a href="" class="dier1">联系我们</a>
+					<a href="" class="dier1">|</a>
+					<a href="" class="dier1">合作商家</a>
+					<a href="" class="dier1">|</a>
+					<a href="" class="dier1">友情链接</a>
+					<a href="" class="dier1">|</a>
+					<a href="" class="dier1">加入我们</a>
+					<a href="" class="dier1">|</a>
+					<a href="" class="dier1">移动应用</a>
+					<a href="" class="dier1">|</a>
+					<a href="" class="dier1">热门</a>
+					<a href="" class="dier1">|</a>
+					<a href="" class="dier1">广告联盟</a>
+					<a href="" class="dier1">|</a>
+					<a href="" class="dier1">使用条款</a>
+				</div>
+				<div id="dier1">Copyright © 2011-2015 B5M.COM.All right reserved.Powered by B5Msoft Co.Ltd.</div>
+				<div id="dier1">增值电信业务经营许可证：泸B2-20130065号|中华人民共和国互联网药品信息服务资格证书(泸)-非经营性-2013-0034泸卫(中医)网申【2015】10032号泸ICP备11034776号-3|食品流通许可证：</div>
+				<div id="dier1">SP3101151410301755</div>
+			</div>
+			<div id="di">
+				<img src="img/bo1.gif">
+				<img src="img/bo2.png">
+				<img src="img/bo3.gif">
+				<img src="img/bo4.png">
+				<img src="img/bo5.png">
+				<img src="img/bo6.png">
+				<img src="img/bo7.png">
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+

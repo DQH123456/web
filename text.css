@@ -1,0 +1,604 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+ul,li,ol{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.head1{
+	width: 1180px;
+	height: 170px;
+	margin: 0 auto;
+}
+.head11{
+	height: 30px;
+	margin: 0 auto;
+	font-size: 9px;
+	color: #9a9791;
+}
+.head11_left{
+	float: left;
+	height: 30px;
+	width: 170px;
+}
+.head11p1{
+	padding-top: 8px;
+}
+.head11_right{
+	width: 740px;
+	height: 30px;
+	float: left;
+	padding-left: 270px;
+}
+.head11a1{
+	height: 19px;
+	width: 19px;
+	background: url(./img/common_min.png) 0 -31px;
+	float: left;
+	margin-left: 18px;
+	margin-top: 6px;
+}
+.head11a2{
+	height: 19px;
+	width: 19px;
+	background: url(./img/common_min.png) 0 -53px;
+	margin-left: 18px;
+	margin-top: 6px;
+	float: left;
+}
+.head11a3{
+	height: 19px;
+	width: 19px;
+	background: url(./img/common_min.png) 0 -75px;
+	margin-left: 18px;
+	margin-top: 6px;
+	float: left;
+}
+.head11p2{
+	float: left;
+	margin-left: 18px;
+	margin-top: 6px;
+}
+.head11a4{
+	height: 19px;
+	width: 19px;
+	background: url(./img/common_min.png) 0 -115px;
+	margin-left: 18px;
+	margin-top: 6px;
+	float: left;
+}
+.head11p4{
+	margin-left: 3px;
+	margin-top: 6px;
+	float: left;
+}
+.head11a5{
+	height: 13px;
+	width: 13px;
+	background: url(./img/dingdan.jpg) ;
+	margin-left: 18px;
+	margin-top: 6px;
+	float: left;
+}
+.head11a6{
+	height: 14px;
+	width: 8px;
+	background: url(./img/tp-my-phone.png);
+	margin-left: 18px;
+	margin-top: 6px;
+	float: left;
+}
+.head11a7{
+	height: 16px;
+	width: 18px;
+	background: url(./Little/img/gouwuche.jpg);
+	margin-left: 18px;
+	margin-top: 6px;
+	float: left;
+}
+.head11p5{
+	margin-left: 3px;
+	margin-top: 6px;
+	float: left;
+	color: #fe6c00;
+}
+.head12{
+	height: 100px;
+	width: 1180px;
+	margin: 0 auto;
+}
+.head121{
+	height: 100px;
+	width: 170px;
+	float: left;
+}
+.head121 img{
+	margin-top: 15px;
+}
+.head122{
+	height: 100px;
+	width: 660px;
+	float: left;
+}
+.head122d1{
+	width: 580px;
+	height: 45px;
+	margin-left: 80px;
+	margin-top: 25px;
+}
+.head122d1 input{
+	width: 500px;
+	height: 40px;
+	float: left;
+	border: 2px solid #fe6c00;
+	border-radius: 2px;
+}
+.head122d1 p{
+	height: 31px;
+	width: 80px;
+	background-color: #fe6c00;
+	text-align: center;
+	color: #fff;
+	font-size: 11px;
+	margin-left: 500px;
+	padding-top: 13px;
+	border-radius: 2px;
+}
+.head122d2{
+	height: 30px;
+	width: 580px;
+	margin-left: 80px;
+}
+.head122d2 p{
+	float: left;
+	font-size: 12px;
+	margin-top: 10px;
+	padding-left: 8px;
+	padding-right: 8px;
+	border-right: 1px solid #ebe7e7;
+}
+.head122d2 p:last-child{
+	border-right: none;
+}
+.head122p1{
+	color: #ff0000;
+}
+.head122p2{
+	color: #666560;
+}
+.head122p3{
+	color: #c0cae0;
+}
+.head122p4{
+	color: #666560;
+}
+.head123{
+	width: 350px;
+	height: 100px;
+	margin-top: 20px;
+	float: left;
+}
+.s1{
+	width: 16px;
+	height: 16px;
+	margin-left:25px;
+	margin-top: 6px;
+	float: left;
+}
+.s2{
+	width: 90px;
+	height: 16px;
+	margin-top: 4px;
+	float: left;
+	font-size: 12px;
+	color: #9a9791;
+}
+#head131{
+	width: 260px;
+	height: 42px;
+	float: left;
+	margin-left: 60px;
+	margin-top: 24px;
+	border-radius: 2px;
+}
+#head132{
+	width: 80px;
+	height: 42px;
+	border: 1px solid #9a9791;
+	float: left;
+	border-radius: 2px;
+}
+#head133{
+	width: 80px;
+	height: 45px;
+	background-color: #fe6c00;
+	float: left;
+	border-radius: 2px;
+	text-align: center;
+	line-height: 40px;
+}
+.que{
+	font-size: 12px; 
+	color: #ffffff; 
+	text-decoration: none;
+}
+#body11{
+	width: 1180px;
+	height: 40px;
+	float: left;
+}
+#body111{
+	width: 170px;
+	height: 40px;
+	background-color: #fe6c00;
+	color: #ffffff;
+	font-size: 14px;
+	line-height: 40px;
+	text-align: center;
+	float: left;
+}
+#body112{
+	height: 42px;
+	float: left;
+}	
+.hot{
+	width: 25px; 
+	height: 10px; 
+	float: right; 
+	margin-right: 20px;
+}	
+#na1{
+	position: relative;
+	text-decoration: none;
+	margin-left: 52px;
+	line-height: 40px;
+	font-size: 14px;
+	color: #000000;}
+#big2{
+	width: 100%;
+	height: 892px;
+	background-color: #f8f7f6;
+	float: left;
+}
+#big2{
+	width: 100%;
+	height: 892px;
+	background-color: #f8f7f6;
+	float: left;
+}
+#small2{
+	width: 1180px;
+	height: 892px;
+	margin: 0 auto;
+}
+#lis1{
+	width: 169px;
+	height: 547px;
+	background-color: #ffffff;
+	float: left;
+}
+#list1{
+	float: left;
+	width: 25px;
+	height: 422px;
+	background-color: #000000;
+	font-size: 14px;
+	border-bottom: 1px solid #fe6c00;
+	color: #ff4d4b;
+}
+#list2{
+	float: left;
+	width: 144px;
+	height: 422px;
+	font-size: 13px;
+	border-bottom: 1px solid #fe6c00;
+}
+.list2{
+	float: left;
+	width: 144px;
+	height: 14px;
+	margin-top: 17px;
+}
+.many{
+	float: left;
+	font-size: 13px;
+	margin-left: 8px;
+	color: #000000;
+	text-decoration: none;
+}
+#list3{
+	float: left;
+	width: 170px;
+	height: 125px;
+	font-size: 14px;
+}
+.ques{
+	font-size: 14px;
+	text-decoration: none;
+	color: #855d38;
+	}
+#lis2{
+	float: left;
+	width: 800px;
+	height: 550px;
+	background-color: #ffffff;
+	border-right: 1px solid #ff4d04;
+}
+#list4{
+	width: 802px;
+	height: 364px;
+	float: left;
+	border-bottom: 1px solid #ff4d04
+}
+#list5{
+	width: 802px;
+	height: 182px;
+	float: left;
+}
+.list5{
+	width: 200px;
+	height: 182px;
+	float: left;
+}
+#lis3{
+	width: 209px;
+	height: 547px;
+	float: left;
+	background-color: #ffffff;
+}
+#list6{
+	width: 209px;
+	height: 42px;
+	float: left;
+	font-size: 14px;
+	border-bottom: 1px solid #ebeae7;
+}
+#list7{
+	width: 209px;
+	height: 322px;
+	font-size: 14px;
+	border-bottom: 1px solid #ebeae7;
+	position: relative; /*因为里面的ul需要移动，所以外面一定要设置为相对定位*/
+    overflow: hidden;   /*不显示超出div部分的内容*/
+    margin: 10px;
+}
+#list8{
+	width: 209px;
+	height: 183px;
+	float: left;
+	font-size: 14px;
+}
+.ul1{
+	margin-top: 24px;
+	text-align: center;
+}
+.li1{
+	list-style-type: none;
+	margin-top: 6px;
+}
+.ul2{
+	float: left;
+}
+.li2{
+	list-style-type: none;
+	margin-top: 14px;
+	margin-left: 6px;
+}
+#horn{
+	width: 17px;
+	height: 17px;
+	margin-left: 22px;
+	margin-top: 14px;
+	float: left;
+}
+#fast{
+	width: 56px;
+	height: 17px;
+	margin-top: 14px;
+	margin-left: 16px;
+	float: left;
+	font-size: 14px;
+	color: #ff4d04;
+}
+#arrow{
+	width: 13px;
+	height: 17px;
+	margin-top: 14px;
+	margin-left: 76px;
+	float: left;
+}
+#phone1{
+	width: 178px;
+	height: 26px;
+	margin-left: 12px;
+	margin-top: 4px;
+	font-size: 14px;
+	color: #000000;
+	float: left;
+}
+#phone2{
+	width: 178px;
+	height: 23px;
+	margin-left: 12px;
+	margin-top: 4px;
+	font-size: 13px;
+	color: #000000;
+	float: left;
+}
+.top{
+	width: 178px; 
+	height: 26px; 
+	background-color: #ff4d04; 
+	color: #ffffff; 
+	font-size: 14px; 
+	text-align: center; 
+	line-height: 20px; 
+	border: 0px;
+}
+
+
+
+
+#container {
+    position: relative;
+    margin-left: 170px;
+    width: 800px;
+    height: 364px;
+    border: 0px solid #333;
+    overflow: hidden;
+}
+#list {
+    position: absolute;
+    z-index: 1;
+    width: 6400px;
+    height: 364px;
+}
+#list img {
+    float: left;
+    width: 800px;
+    height: 364px;
+}
+#buttons {
+    position: absolute;
+    left: 300px;
+    bottom: 20px;
+    z-index: 2;
+    height: 10px;
+    width: 200px;
+}
+#buttons span {
+    float: left;
+    margin-right: 7px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #D0D0D0;
+    cursor: pointer;
+}
+#buttons .on {
+    background: orangered;
+}
+.arrow {
+    position: absolute;
+    top: 180px;
+    z-index: 2;
+    display: none;
+    width: 40px;
+    height: 40px;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 39px;
+    text-align: center;
+    color: #fff;
+    background-color: RGBA(0, 0, 0, .3);
+    cursor: pointer;
+}
+.arrow:hover {
+    background-color: RGBA(0, 0, 0, .7);
+}
+#container:hover .arrow {
+    display: block;
+}
+#prev {
+    left: 20px;
+}
+#next {
+    right: 20px;
+}
+
+#scrollBox{
+    width: 209px;
+    height: 322px;
+    font-size: 14px;
+    border-bottom: 1px solid #ebeae7;
+    position: relative; /*因为里面的ul需要移动，所以外面一定要设置为相对定位*/
+    overflow: hidden;   /*不显示超出div部分的内容*/
+
+}
+#con1,#con2{
+    width: 168px;
+    height: 380px;
+    margin-left: 10px;
+    float: left;
+    font-size: 13px;
+    color: #ff4d04;
+}
+#scrollBox li{
+    height:15px;
+    line-height:15px;
+    float: left;
+}
+#gonggao1{
+    list-style-type: none;
+    margin-top: 14.5px;
+}
+
+
+#last{
+	width: 1180px;
+	height: 182px;
+	float: left;
+}
+#last1{
+	width: 149px;
+	height: 182px;
+	float: left;
+}
+#last2{
+	width: 860px;
+	height: 182px;
+	float: left;
+	border-bottom: 1px solid #ebeae7;
+}
+#mlast{
+	margin-top: 20px;
+	margin-left: 62px;
+	float: left;
+}
+#mlast1{
+	margin-top: 8px;
+	font-size: 14px;
+	color: #666560;
+	list-style-type: none;
+}
+#mlast2{
+	margin-top: 8px;
+	color: #666560;
+	list-style-type: none;
+	color: #000000;
+	font-size: 18px;
+}
+#last3{
+	width: 171px;
+	height: 182px;
+	padding-top: 28px;
+	float: left;
+}
+#dier{
+	width: 1180px;
+	height: 108px;
+	float: left;
+}
+#di{
+	width: 1180px;
+	height: 56px;
+	float: left;
+	text-align: center;
+}
+#dier1{
+	width: 1180px;
+	height: 16px;
+	margin-top: 11px;
+	text-align: center;
+	float: left;
+	font-size: 12px;
+	color: #9a9791;
+}
+.dier1{
+	margin-left: 10px;
+	color: #666560;
+	text-decoration: none;
+}
