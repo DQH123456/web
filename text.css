@@ -602,3 +602,41 @@ a{
 	color: #666560;
 	text-decoration: none;
 }
+
+
+.beside{
+	float: left;
+	width: 45px;
+	position: fixed;
+	right: 0;
+}
+.bes1{
+	height: 95px;
+	width: 123px;
+	float: left;
+}
+.bes2{
+	height: 140px;
+	width: 123px;
+	float: left;
+}
+.bes21{
+	height: 140px;
+	width: 63px;
+	float: left;
+}
+.bes22{
+	height: 20px;
+	width: 50px;
+	border: 1px solid #fff;
+}
+.bes3{
+	height: 150px;
+	width: 123px;
+	background: #fd9a6e;
+	float: left;
+}
+.bes33{
+	height: 100px;
+	width: 123px;
+}
