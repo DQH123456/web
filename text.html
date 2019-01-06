@@ -6,6 +6,7 @@
 		<title>one</title>
 	</head>
 	<body>
+
 		<div class="head1">
 			<div class="head11">
 				<div class="head11_left">
@@ -74,6 +75,7 @@
 				</div>
 			</div>
 			<div id="body11">
+
 				<div id="body111">
 					全部商品分类
 				</div>
@@ -205,6 +207,7 @@
 
 
 
+
 	<div id="big2">
 		<div id="small2">
 			<div id="lis1">
@@ -303,8 +306,67 @@
 					</div>
 
 
+						<div class="beside" style="height: 95px;top:20px;">
+			<div class="bes1">
+				<img src="./img/consult-s.png" style="margin-bottom: -5px">
+				<img src="./img/xiaobang.png">
 
+			</div>
+		</div>
+		<div class="beside" style="height: 140px;top:120px">
+			<div class="bes2">
+				<img src="./img/youhui.png" style="float: left;">
+				<div class="bes21">
+					<p style="margin: 40px 0 20px 0;font-size: 14px">未登录</p>
+					<div class="bes22">
+						<p style="color:#fff;font-size:14px;text-align: center">登录</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="beside" style="height: 145px;top:265px">
+			<div class="bes3">
+				<img src="./img/app.png">
+				<div class="bes33">
+					<img src="./img/serwei.png" style="margin:40px 0 0 10px" id="serwei">
+				</div>
+			
+			</div>
+		</div>
+		<div class="beside" style="height: 140px;top:420px">
+			<div>
+				<img src="./img/cart.png" style="margin-bottom:-5px">
+			</div>
+		</div>
+		<script type="text/javascript">
+			var beside=document.getElementsByClassName("beside");
+			var serwei=document.getElementById("serwei");
+			for(var i=0;i<beside.length;i++){
+				(function(i){
+					beside[i].onmouseover=function(){
+						if(i==2){
+							serwei.src="./img/serwei.png";
+							serwei.style.margin="0 0 0 10px"
+							beside[i].style.width="123px";
+						}
+						beside[i].style.width="123px";				
+					}
 
+				})(i);
+			}	
+			for(var i=0;i<beside.length;i++){
+				(function(i){
+					beside[i].onmouseout=function(){
+						if(i==2){
+							serwei.src="./img/serwei.png";
+							serwei.style.margin="40px 0 0 10px"
+							beside[i].style.width="45px";
+						}
+						beside[i].style.width="45px";
+					}
+				})(i);
+			}
+		</script>
 
 
 
@@ -338,7 +400,7 @@
 					<a href="" class="list5">
 						<img src="img/3(1).png">
 					</a>
-					<a href="text1.html" class="list5">
+					<a href="text2.html" class="list5">
 						<img src="img/qqq.png">
 					</a>
 				</div>
@@ -378,7 +440,7 @@
            </ul>
         <ul id="con2"></ul>
     </div>
-    <script type="text/javascript">            
+    <script type="text/javascript">           
                 var area =document.getElementById('scrollBox');
                 var con1 = document.getElementById('con1');
                 var con2 = document.getElementById('con2');
@@ -411,7 +473,7 @@
 					<div id="phone2">
 						<select style="width: 60px; height: 20px; margin-top: 3px;">
 							<option>10</option>
-							<option>30</option>                                                                                                                                                                                                                                                                                                                                                                                                                                           
+							<option>30</option>
 							<option>50</option>
 							<option>100</option>
 						</select>
@@ -421,7 +483,9 @@
 						<input type="submit" name="" value="充值" class="top">
 					</div>
 				</div>
+
 			</div>
+
 
 
 
